@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NEXUS KRISISHOP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <img id="logo" src="assets/logo.png" alt="Logo" onerror="this.style.display='none'">
+      <div><strong>NEXUS</strong><span>KRISISHOP</span></div>
+    </div>
+    <nav id="nav">
+      <button data-view="dashboard" class="active">⌂ <span>ড্যাশবোর্ড</span></button>
+      <button data-view="sales">🛒 <span>বিক্রয় / POS</span></button>
+      <button data-view="purchases">📥 <span>ক্রয়</span></button>
+      <button data-view="products">📦 <span>পণ্য</span></button>
+      <button data-view="stock">📊 <span>স্টক</span></button>
+      <button data-view="customers">👥 <span>কাস্টমার</span></button>
+      <button data-view="companies">🏢 <span>কোম্পানি</span></button>
+      <button data-view="employees">👨‍💼 <span>কর্মচারী</span></button>
+      <button data-view="payments">💳 <span>পেমেন্ট</span></button>
+      <button data-view="reports">📈 <span>রিপোর্ট</span></button>
+      <button data-view="settings">⚙️ <span>সেটিংস</span></button>
+    </nav>
+    <div class="side-footer">Google Sheets Database<br><small>Apps Script API</small></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn" id="menuBtn">☰</button>
+      <div class="search"><span>⌕</span><input id="globalSearch" placeholder="সার্চ করুন..."></div>
+      <div class="top-actions">
+        <span class="status-dot" id="apiStatus">● সংযোগ হচ্ছে...</span>
+        <button class="icon-btn" id="refreshBtn" title="Refresh">↻</button>
+      </div>
+    </header>
+    <section class="content" id="content"></section>
+  </main>
+</div>
+<div id="modalRoot"></div>
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
